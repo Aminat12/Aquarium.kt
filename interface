@@ -1,0 +1,23 @@
+package example.myapp
+
+abstract class AquariumFish {
+    abstract val color: String
+}
+
+class Shark: AquariumFish() {
+    override val color = "grey"
+}
+
+class Plecostomus: AquariumFish() {
+    override val color = "gold"
+}
+fun makeFish() {
+    val shark = Shark()
+    val pleco = Plecostomus()
+
+    println("Shark: ${shark.color}")
+    println("Plecostomus: ${pleco.color}")
+}
+fun main () {
+    makeFish()
+}
